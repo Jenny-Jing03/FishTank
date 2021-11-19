@@ -1,43 +1,42 @@
 # FishTank
  *This project is the alternation of the Fish Tank Project in COMP SCI300 of UW-Madison (Fall 2021)*
+ 
  *import *core.jar* for visulization*
+ 
 ## goal
 
-- Show a picture in the screen with fish and decoration
+- Show a picture in the screen with moving fishes and decorations
 - No more than 6 moving fishes appeared in the screen
 - When clicking a fish, delete the fish, and add a new fish into screen 
 - four types of fish with random speed will add randomly into the screen
 
-**import *core.jar* for visulization** 
-
 ### component 
 
-- Double Linked List
-  - Fields
-    - data
-      - the data field
-  	- front 
-  		- the previous node
-  	- next
-  		- the next node
-  - Method
+#### LinkedNode Class
+- This represents the generic abstract data type linked node. This interface will be implemented by a non-generic data structure double linked list in other class.
 
-      - accessor
-        - getData
-        - getFront
-        - getNext
-        - toString
-      - mutator
-          - 	 setFront
-          - 	 setNext	
-- ObjectList
-	- store the decorations and fishes
-		- FIelds
-			- head
-			- tail
-			- size
-		- Method
-			- accessor
+##### Fields
+	data: the reference of data in this linked node
+   	front: the reference of previous node
+	next: the reference of next node
+    
+##### Method
+	getData: get the data in this linked node
+	getFront: get the reference of the previous node
+	getNext: get the reference of the next node
+	toString: return the string representation of the node
+	setFront: set the reference of the previous node
+	setNext: set the reference of the next node
+	
+#### ObjectList Class
+- This represents the double linked list of TankObject for storing the decorations and fishes
+
+##### Fields
+	head
+	tail
+	size
+
+##### Method
         - getHead
         - getTail
         - getSize
